@@ -1,9 +1,8 @@
-using System;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 using eCommerceMessaging.Billing.Messages.Events;
 using eCommerceMessaging.Shipping.ArrangeShippings.Infrastructure;
 using eCommerceMessaging.Shipping.Messages.Events;
-using Microsoft.Extensions.Logging;
 using NServiceBus;
 
 namespace eCommerceMessaging.Shipping.ArrangeShippings

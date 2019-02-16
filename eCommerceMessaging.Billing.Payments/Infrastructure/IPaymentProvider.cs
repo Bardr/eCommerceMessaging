@@ -1,4 +1,4 @@
-namespace eCommerceMessaging.Billing.Payments
+namespace eCommerceMessaging.Billing.Payments.Infrastructure
 {
     public interface IPaymentProvider
     {

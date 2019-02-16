@@ -2,6 +2,7 @@
 using System.Runtime.Loader;
 using System.Threading;
 using eCommerceMessaging.BaseHost;
+using eCommerceMessaging.Billing.Payments.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using NServiceBus;
 

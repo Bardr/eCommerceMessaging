@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using eCommerceMessaging.Sales.Messages.Events;
+using eCommerceMessaging.Shipping.ArrangeShippings.Infrastructure;
 using Microsoft.Extensions.Logging;
 using NServiceBus;
 

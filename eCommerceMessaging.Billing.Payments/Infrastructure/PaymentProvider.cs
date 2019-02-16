@@ -1,7 +1,7 @@
 using System;
 using eCommerceMessaging.Billing.Messages.Commands;
 
-namespace eCommerceMessaging.Billing.Payments
+namespace eCommerceMessaging.Billing.Payments.Infrastructure
 {
     public class PaymentProvider : IPaymentProvider
     {

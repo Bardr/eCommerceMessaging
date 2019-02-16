@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using eCommerceMessaging.Sales.Messages.Commands;
 using eCommerceMessaging.Sales.Messages.Events;
+using eCommerceMessaging.Sales.Orders.Infrastructure;
 using Microsoft.Extensions.Logging;
 using NServiceBus;
 

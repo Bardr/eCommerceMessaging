@@ -1,7 +1,7 @@
-using System.Collections.Generic;
 using System.Linq;
+using System.Collections.Generic;
 
-namespace eCommerceMessaging.Shipping.ArrangeShippings
+namespace eCommerceMessaging.Shipping.ArrangeShippings.Infrastructure
 {
     public class ShippingDatabase : IShippingDatabase
     {

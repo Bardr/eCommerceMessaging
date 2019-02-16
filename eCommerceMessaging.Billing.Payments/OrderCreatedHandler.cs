@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using eCommerceMessaging.Billing.Messages.Commands;
+using eCommerceMessaging.Billing.Payments.Infrastructure;
 using eCommerceMessaging.Sales.Messages.Events;
 using Microsoft.Extensions.Logging;
 using NServiceBus;

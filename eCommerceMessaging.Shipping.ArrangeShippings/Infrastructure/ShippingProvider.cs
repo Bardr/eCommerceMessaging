@@ -1,4 +1,4 @@
-namespace eCommerceMessaging.Shipping.ArrangeShippings
+namespace eCommerceMessaging.Shipping.ArrangeShippings.Infrastructure
 {
     public class ShippingProvider : IShippingProvider
     {

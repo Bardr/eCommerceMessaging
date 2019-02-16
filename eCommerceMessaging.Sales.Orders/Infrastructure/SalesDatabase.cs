@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace eCommerceMessaging.Sales.Orders
+namespace eCommerceMessaging.Sales.Orders.Infrastructure
 {
     // This can be any database technology. 
     // It can differ between business components/components (microservices).

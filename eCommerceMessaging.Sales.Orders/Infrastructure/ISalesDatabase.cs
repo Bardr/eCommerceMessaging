@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace eCommerceMessaging.Sales.Orders
+namespace eCommerceMessaging.Sales.Orders.Infrastructure
 {
     public interface ISalesDatabase
     {

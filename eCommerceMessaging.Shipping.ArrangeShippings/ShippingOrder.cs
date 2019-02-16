@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace eCommerceMessaging.Shipping.ArrangeShippings
 {
     public class ShippingOrder

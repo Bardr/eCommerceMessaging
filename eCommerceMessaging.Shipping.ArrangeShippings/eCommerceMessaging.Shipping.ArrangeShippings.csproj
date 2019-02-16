@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\eCommerceMessaging.Sales.Messages\eCommerceMessaging.Sales.Messages.csproj" />
+    <ProjectReference Include="..\eCommerceMessaging.Billing.Messages\eCommerceMessaging.Billing.Messages.csproj" />
+    <ProjectReference Include="..\eCommerceMessaging.Shipping.Messages\eCommerceMessaging.Shipping.Messages.csproj" />
+    <ProjectReference Include="..\eCommerceMessaging.BaseHost\eCommerceMessaging.BaseHost.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.2.0" />
+    <PackageReference Include="NServiceBus" Version="7.1.6" />
+    <PackageReference Include="NServiceBus.MSDependencyInjection" Version="0.1.3" />
+    <PackageReference Include="NServiceBus.RabbitMQ" Version="5.0.2" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+</Project>

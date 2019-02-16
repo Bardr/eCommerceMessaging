@@ -1,0 +1,56 @@
+version: "2.3"
+services:
+  web:
+    image: ecommercemessaging.web
+    ports:
+      - "8080:80"
+    build:
+      context: .
+      dockerfile: ./eCommerceMessaging.Web/Dockerfile
+    networks:
+      - base
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+  sales:
+    image: ecommercemessaging.sales.orders
+    build:
+      context: .
+      dockerfile: ./eCommerceMessaging.Sales.Orders/Dockerfile
+    networks:
+      - base
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+  billing:
+    image: ecommercemessaging.billing.payments
+    build:
+      context: .
+      dockerfile: ./eCommerceMessaging.Billing.Payments/Dockerfile
+    networks:
+      - base
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+  shipping:
+    image: ecommercemessaging.shipping.arrangeshippings
+    build:
+      context: .
+      dockerfile: ./eCommerceMessaging.Shipping.ArrangeShippings/Dockerfile
+    networks:
+      - base
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    ports:
+      - "15672:15672"
+    networks:
+      - base
+    healthcheck:
+      test: ["CMD-SHELL", "if rabbitmqctl status; then \nexit 0 \nfi \nexit 1"]
+      interval: 10s
+      retries: 5
+networks:
+  base:

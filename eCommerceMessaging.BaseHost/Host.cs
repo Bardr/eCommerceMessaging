@@ -38,7 +38,6 @@ namespace eCommerceMessaging.BaseHost
 
 
                 _logger.LogInformation($"{_hostName}: Starting...");
-                // Console.WriteLine($"{_hostName}: Starting...");
                 if (configure != null)
                 {
                     configure(services);
@@ -54,18 +53,15 @@ namespace eCommerceMessaging.BaseHost
             }
             catch (Exception ex)
             {
-                // Console.WriteLine(ex.Message);
                 _logger.LogError($"{_hostName}: {ex.Message}");
             }
             finally
             {
                 _logger.LogInformation($"{_hostName}: Cleaning up resources...");
-                // Console.WriteLine($"{_hostName}: Cleaning up resources...");
                 // Clean...
             }
 
             _logger.LogInformation($"{_hostName}: Exiting...");
-            // Console.WriteLine($"{_hostName}: Exiting...");
             Complete.Set();
         }
 
@@ -104,7 +100,6 @@ namespace eCommerceMessaging.BaseHost
         private void Default_Unloading(AssemblyLoadContext obj)
         {
             _logger.LogInformation($"{_hostName}: Shutting down in response to SIGTERM.");
-            // Console.WriteLine($"{_hostName}: Shutting down in response to SIGTERM.");
             Shutdown.Set();
             Complete.Wait();
         }

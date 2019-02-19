@@ -1,14 +1,13 @@
 FROM microsoft/dotnet:sdk AS build-env
+
 WORKDIR /app
+COPY eCommerceMessaging.Shipping.ArrangeShippings/  ./eCommerceMessaging.Shipping.ArrangeShippings/
+COPY eCommerceMessaging.Sales.Messages/  ./eCommerceMessaging.Sales.Messages/
+COPY eCommerceMessaging.Billing.Messages/  ./eCommerceMessaging.Billing.Messages/
+COPY eCommerceMessaging.Shipping.Messages/  ./eCommerceMessaging.Shipping.Messages/
+COPY eCommerceMessaging.BaseHost/  ./eCommerceMessaging.BaseHost/
 
-COPY eCommerceMessaging.Shipping.ArrangeShippings/*.csproj  ./eCommerceMessaging.Shipping.ArrangeShippings/
-COPY eCommerceMessaging.Sales.Messages/*.csproj  ./eCommerceMessaging.Sales.Messages/
-COPY eCommerceMessaging.Billing.Messages/*.csproj  ./eCommerceMessaging.Billing.Messages/
-COPY eCommerceMessaging.Shipping.Messages/*.csproj  ./eCommerceMessaging.Shipping.Messages/
-COPY eCommerceMessaging.BaseHost/*.csproj  ./eCommerceMessaging.BaseHost/
-
-COPY . .
-
+WORKDIR /app/eCommerceMessaging.Shipping.ArrangeShippings/
 RUN dotnet publish -c Release -o out
 
 FROM build-env AS final
